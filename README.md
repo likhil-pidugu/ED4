@@ -66,19 +66,20 @@ chmod +x ed4.sh
 
 ## 📚 Encryption Process
 
-| Layer | Algorithm        | Description                         |
-| ----- | ---------------- | ----------------------------------- |
-| 🔐 1  | ASCII Shift      | Character shift based on permission |
-| 🔁 2  | Reverse + Rotate | Hex and byte reverse rotation       |
-| 🧠 3  | NXR-4            | Custom Nibble Swapping              |
-| 📦 4  | Base64 + Gzip    | Final compress and encode           |
+| Layer | Algorithm        | Description                              |
+| ----- | ---------------- | ---------------------------------------- |
+| 🔐 1  | ASCII Shift      | Character shift based on file permission |
+| 🔁 2  | Reverse + Rotate | Hex and byte reverse rotation            |
+| 🧠 3  | NXR-4            | Nibble Xchange Rotation                  |
+| 📦 4  | Base64 + Gzip    | Final compress and encode                |
 
 ---
 
 ## 🌐 Links
 
-* 🔗 GitHub: [ED4 Project](https://github.com/likhil-pidugu/LINUX-UTILITIES/tree/main/ED4)
-* 🌍 Website Style View: **Coming Soon via GitHub Pages**
+* 🔗 GitHub: [ED4 Project](https://github.com/likhil-pidugu/ED4)
+* **Complete LINUX-UTILITIES:** [LINUX-UTILITIES Project](https://github.com/likhil-pidugu/LINUX-UTILITIES)
+* 🌍 **Author PortFolio:** [Website](https://likhil.42web.io)
 * 🧪 Author: [Likhil Pidugu](https://github.com/likhil-pidugu)
 
 ---
@@ -87,12 +88,3 @@ chmod +x ed4.sh
 ⭐ If you like this project, give it a star!  
 🎯 Let’s Encrypt the World, One Shell at a Time.
 </div>
-
----
-
-### ✅ Output Preview (on GitHub)
-
-* ✅ Clean dark theme with gradients and centered layout
-* ✅ Works *inside* `README.md`
-* ✅ Screenshots, badges, emojis, tables, commands, links
-* ❌ No actual CSS animations, but visually very modern
