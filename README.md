@@ -1,171 +1,98 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ED4 – Universal File Encryption Utility</title>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet" />
-  <style>
-    body {
-      margin: 0;
-      font-family: 'JetBrains Mono', monospace;
-      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-      color: #ffffff;
-      animation: fadeIn 2s ease-in-out;
-    }
-    header {
-      text-align: center;
-      padding: 4rem 2rem 1rem;
-      background: #121212cc;
-    }
-    h1 {
-      font-size: 3rem;
-      animation: glow 2s ease-in-out infinite alternate;
-    }
-    h2 {
-      margin-top: 2rem;
-      font-size: 2rem;
-      color: #00ffff;
-    }
-    p, li {
-      font-size: 1rem;
-      line-height: 1.6;
-    }
-    .container {
-      max-width: 1000px;
-      margin: auto;
-      padding: 2rem;
-    }
-    .features, .stack, .usage, .demo {
-      background: rgba(255,255,255,0.05);
-      margin: 2rem 0;
-      padding: 2rem;
-      border-radius: 10px;
-      box-shadow: 0 0 20px rgba(0,255,255,0.1);
-      backdrop-filter: blur(4px);
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 1rem;
-    }
-    table, th, td {
-      border: 1px solid #00ffff44;
-    }
-    th, td {
-      padding: 0.75rem;
-      text-align: left;
-    }
-    .glow-text {
-      color: #00ffee;
-      text-shadow: 0 0 5px #00ffeeaa, 0 0 10px #00ffeeaa;
-    }
-    .screenshot {
-      width: 100%;
-      border-radius: 12px;
-      margin-top: 1rem;
-      box-shadow: 0 0 25px #00ffff33;
-    }
-    @keyframes glow {
-      from { text-shadow: 0 0 10px #0ff, 0 0 20px #0ff; }
-      to { text-shadow: 0 0 20px #00ffff, 0 0 30px #00ffffaa; }
-    }
-    @keyframes fadeIn {
-      0% { opacity: 0; transform: translateY(-20px); }
-      100% { opacity: 1; transform: translateY(0); }
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <h1>🔐 ED4 – Universal File Encryption Utility</h1>
-    <p class="glow-text">Multi-layered Bash encryption, permission-aware, and beautifully terminal-native</p>
-  </header>
-  <div class="container">
+<!-- README.md -->
+<div align="center" style="padding: 20px; border-radius: 20px; border: 3px solid #4caf50; background: linear-gradient(to right, #0f2027, #203a43, #2c5364); color: white; font-family: monospace;">
 
-    <section class="features">
-      <h2>✨ Features</h2>
-      <ul>
-        <li>🔐 <strong>Four-Layer Encryption Stack</strong> — Unique, reversible Bash-based algorithms</li>
-        <li>🧠 <strong>Permission-Based Keying</strong> — Chmod-derived entropy logic</li>
-        <li>📝 <strong>Smart Logging</strong> — Timestamped `encdec.log` system</li>
-        <li>📄 <strong>File Auto-Viewer</strong> — Handles both terminal & browser-based content</li>
-        <li>💻 <strong>Zero External Dependencies</strong> — Only core utils: bash, awk, base64, xxd</li>
-        <li>📦 <strong>Portable Output</strong> — Minimal `.enc` and `.dec` files</li>
-      </ul>
-    </section>
+<h1 style="font-size: 3em; margin-bottom: 10px;">🔐 ED4 – Universal Encryption Utility</h1>
+<p style="font-size: 1.2em;">Made with 💻 Bash + 🧠 Logic + ❤️ Passion by <b>Likhil & Co</b></p>
 
-    <section class="stack">
-      <h2>🔗 Encryption Stack</h2>
-      <table>
-        <thead>
-          <tr><th>Layer</th><th>Name</th><th>Description</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>1️⃣</td><td>ASCII Byte Shift</td><td>Permission-based rotation of ASCII values</td></tr>
-          <tr><td>2️⃣</td><td>Hex Reverse + Rotate</td><td>In-place hex string mangling</td></tr>
-          <tr><td>3️⃣</td><td>NXR4 – Nibble Swap</td><td>Custom nibble reversal encryption</td></tr>
-          <tr><td>4️⃣</td><td>Base64 + Block Shuffling</td><td>Final obfuscation via encode & reorder</td></tr>
-        </tbody>
-      </table>
-    </section>
+<img src="https://img.shields.io/badge/Version-4.0-blue?style=flat-square" />
+<img src="https://img.shields.io/github/stars/likhil-pidugu/LINUX-UTILITIES?style=social" />
+<img src="https://img.shields.io/github/forks/likhil-pidugu/LINUX-UTILITIES?style=social" />
 
-    <section class="usage">
-      <h2>📦 Usage</h2>
-      <pre><code>git clone https://github.com/likhil-pidugu/ED4.git
-cd ED4
+<hr style="border-top: 1px solid white; width: 80%;">
+
+<img src="https://raw.githubusercontent.com/likhil-pidugu/LINUX-UTILITIES/main/ED4/demo-screenshot.gif" alt="ED4 Demo Screenshot" width="700px" style="border-radius: 15px; box-shadow: 0 0 15px lime;">
+
+</div>
+
+---
+
+## 🚀 Features
+
+<div style="margin-left: 20px;">
+🔸 Multi-layered encryption based on:
+  - ASCII Shifting
+  - Hex + Byte Rotation
+  - Nibble Swapping (NXR-4)
+  - Gzip + Base64 Compression  
+🔸 Works on ANY file — `.pdf`, `.sh`, `.jpg`, `.zip`, etc.  
+🔸 Smart permission-based logic  
+🔸 Fully Reversible ✅  
+🔸 Elegant CLI UI with logging + animation  
+🔸 ⚙️ Built entirely in Bash  
+</div>
+
+---
+
+## 📁 Project Structure
+
+```bash
+📂 LINUX-UTILITIES/
+└── 📂 ED4/
+    ├── ed4.sh             # Main script
+    ├── demo-screenshot.gif
+    ├── encrypted_file.enc
+    ├── README.md
+    └── logs/
+````
+
+---
+
+## 🛠️ Installation
+
+```bash
+git clone https://github.com/likhil-pidugu/LINUX-UTILITIES.git
+cd LINUX-UTILITIES/ED4
 chmod +x ed4.sh
-./ed4.sh</code></pre>
-      <p><strong>Menu:</strong></p>
-      <iframe src="https://skillsuprise.com" > </iframe>
-      <ul>
-        <li>🔐 Encrypt File</li>
-        <li>🔑 Decrypt File</li>
-        <li>📄 View File</li>
-        <li>🔍 View Logs</li>
-        <li>❌ Exit</li>
-      </ul>
-    </section>
+./ed4.sh
+```
 
-    <section class="demo">
-      <h2>🧪 Live Demo (Terminal)</h2>
-      <pre><code>$ ./ed4.sh
-Choose option 1: 🔐 Encrypt
-Enter file path: <em>secret.pdf</em>
-✅ Output: secret.pdf.enc
+---
 
-Choose option 2: 🔑 Decrypt
-Enter file path: <em>secret.pdf.enc</em>
-✅ Output: secret.pdf.dec</code></pre>
-      <img src="https://raw.githubusercontent.com/likhil-pidugu/ED4/main/screenshots/demo.png" alt="Live Demo Screenshot" class="screenshot" />
-    </section>
+## 📽️ Demo
 
-    <section class="stack">
-      <h2>📊 Real-Time Stats</h2>
-      <img src="https://komarev.com/ghpvc/?username=likhil-pidugu&label=Visitors" />
-      <img src="https://img.shields.io/tokei/lines/github/likhil-pidugu/ED4" />
-      <img src="https://img.shields.io/github/languages/top/likhil-pidugu/ED4" />
-    </section>
+<img src="https://raw.githubusercontent.com/likhil-pidugu/LINUX-UTILITIES/main/ED4/demo-screenshot.gif" width="700px" style="border-radius: 10px;">
 
-    <section class="features">
-      <h2>🧠 Philosophy</h2>
-      <p><em>"Encrypt not just bytes, but behaviors. ED4 evolves based on permissions, so every file is uniquely protected."</em></p>
-      <p>— <strong>LIKHIL & CO</strong></p>
-    </section>
+---
 
-    <section class="features">
-      <h2>📜 License</h2>
-      <p>Licensed under the <a href="LICENSE" style="color:#0ff;">MIT License</a>. Fork, contribute, or enhance freely.</p>
-    </section>
+## 📚 Encryption Process
 
-    <section class="features">
-      <h2>🙌 Credits</h2>
-      <ul>
-        <li>Developed with ❤️ by <strong>LIKHIL & CO</strong></li>
-        <li>Readme animations inspired by modern AI UI/UX patterns</li>
-      </ul>
-    </section>
+| Layer | Algorithm        | Description                         |
+| ----- | ---------------- | ----------------------------------- |
+| 🔐 1  | ASCII Shift      | Character shift based on permission |
+| 🔁 2  | Reverse + Rotate | Hex and byte reverse rotation       |
+| 🧠 3  | NXR-4            | Custom Nibble Swapping              |
+| 📦 4  | Base64 + Gzip    | Final compress and encode           |
 
-  </div>
-</body>
-</html>
+---
+
+## 🌐 Links
+
+* 🔗 GitHub: [ED4 Project](https://github.com/likhil-pidugu/LINUX-UTILITIES/tree/main/ED4)
+* 🌍 Website Style View: **Coming Soon via GitHub Pages**
+* 🧪 Author: [Likhil Pidugu](https://github.com/likhil-pidugu)
+
+---
+
+<div align="center" style="padding: 10px; background: #111; color: #0f0; font-size: 1.2em; border-radius: 10px;">
+⭐ If you like this project, give it a star!  
+🎯 Let’s Encrypt the World, One Shell at a Time.
+</div>
+
+---
+
+### ✅ Output Preview (on GitHub)
+
+* ✅ Clean dark theme with gradients and centered layout
+* ✅ Works *inside* `README.md`
+* ✅ Screenshots, badges, emojis, tables, commands, links
+* ❌ No actual CSS animations, but visually very modern
