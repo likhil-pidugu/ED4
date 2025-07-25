@@ -33,25 +33,11 @@
 
 ---
 
-## 📁 Project Structure
-
-```bash
-📂 LINUX-UTILITIES/
-└── 📂 ED4/
-    ├── ed4.sh             # Main script
-    ├── demo-screenshot.gif
-    ├── encrypted_file.enc
-    ├── README.md
-    └── logs/
-````
-
----
-
 ## 🛠️ Installation
 
 ```bash
-git clone https://github.com/likhil-pidugu/LINUX-UTILITIES.git
-cd LINUX-UTILITIES/ED4
+git clone https://github.com/likhil-pidugu/ED4.git
+cd ED4
 chmod +x ed4.sh
 ./ed4.sh
 ```
